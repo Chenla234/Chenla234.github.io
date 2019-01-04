@@ -1,67 +1,269 @@
-<!DOCTYPE html>
 <html>
 <head>
-<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet'>
+	<title>Unternehmen</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
+	<style>
+	/*General*/
+	body, html {
+		height: 100%;
+		margin: 0;
+	}
+	.bg-grey {
+		background-color: #f6f6f6;
+	}
+	.btn-default {
+		background-color: #f6f6f6;
+	}
+	.contacts p{
+		padding: 0;
+	}
+	/*parallax effect*/
+	.parallax {
+		/* The image used */
+		background-image: url("images/background.png");
+		/* Full height */
+		height: 100%; 
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+	@media only screen and (max-device-width: 1366px) {
+		.parallax {
+			background-attachment: scroll;
+		}
+	}
+	
+	/*Navigation Bar*/
+	.navbar {
+		margin-bottom: 0;
+		background-color: #808080;
+		z-index: 9999;
+		border: 0;
+		font-size: 12px !important;
+		line-height: 1.42857143 !important;
+		letter-spacing: 4px;
+		border-radius: 0;
+	}
+
+	.navbar li a, .navbar .navbar-brand {
+		color: #fff !important;
+	}
+
+	.navbar-nav li a:hover, .navbar-nav li.active a {
+		color: #808080 !important;
+		background-color: #fff !important;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: white;
+	}
+	.navbar-default .navbar-toggle {
+		border-color: transparent;
+		color: #fff !important;
+	}
+	
+	/*Parallax caption*/
+	.caption {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		top: 10%; #36
+		width: 100%;
+		text-align: center;
+		color: black;
+	}
+	
+	/*Content*/
+	.container-fluid {
+		padding: 30px 50px;
+	}
+
+	.container-fluid .col-sm-8 h4,p{
+		padding-top: 20px;
+	}
+	@media screen and (max-width: 768px) {
+		.col-sm-4 {
+			text-align: center;
+			margin: 25px 0;
+		}
+	}
+	
+	/*Team*/
+	.thumbnail {
+		margin-top: 20px;
+		padding: 0 0 15px 0;
+		border: none;
+		border-radius: 0;
+	}
+
+	.thumbnail img {
+	}
+	/*Footer*/
+	footer .glyphicon {
+		font-size: 20px;
+		color: black;
+	}
+	</style>
 </head>
-<style>
-body {
-margin: 0px;
-}
-.container {
-  position: relative;
-  text-align: center;
-  color: black;
-}
-.centered1 {
-  position: absolute;
-  top: 53%;
-  left: 50%;
-  text-align:center;
-  transform: translate(-50%, -50%);
-  font-size: 59px;
-  font-family: Italianno;
-}
-img {
-	border: solid;
-	border-width: 3px;
-	border-color: #f2f2f2;
-	width:397px;
-	height:217px;
-}
-.centered2 {
-  position: absolute;
-  top: 76%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align:center;
-  font-size: 16px;
-}
-</style>
-<body>
-<div class="container">
-	<img src="Tischkarte 2018 V2 (2).jpg">
-	<div class="centered1">Wolfgang</div>
-	<div class="centered2">- Silvester 2018 -</div>
-</div>
-<div class="container">
-	<img src="Tischkarte 2018 V2 (2).jpg">
-	<div class="centered1">Eva</div>
-	<div class="centered2">- Silvester 2018 -</div>
-</div>
-<div class="container">
-	<img src="Tischkarte 2018 V2 (2).jpg">
-	<div class="centered1">Nicki</div>
-	<div class="centered2">- Silvester 2018 -</div>
-</div>
-<div class="container">
-	<img src="Tischkarte 2018 V2 (2).jpg">
-	<div class="centered1">Andi</div>
-	<div class="centered2">- Silvester 2018 -</div>
-</div>
-<div class="container">
-	<img src="Tischkarte 2018 V2 (2).jpg">
-	<div class="centered1">Moritz</div>
-	<div class="centered2">- Silvester 2018 -</div>
-</div>
+<body id="homepage" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<div class="parallax"> //Parallax Effect
+	"""Navbar"""
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
+					<a class="navbar-brand" href="#homepage" style="font-family: 'Norican';">Unternehmen</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#homepage">HOME</a></li>
+						<li><a href="#about">ÜBER UNS</a></li>
+						<li><a href="#team">TEAM</a></li>
+						<li><a href="#contact">KONTAKT/ANFAHRT</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		"""Caption"""
+		<div class="caption">
+			<h1 style="font-family: 'Norican';font-size: 48px;">Unternehmen</h1>
+		</div>
+	</div>
+	
+	<div id="about" class="container-fluid">
+		<div class="row">
+			<div>
+				<h2 style="padding-top: 20px;">Über Uns</h2>
+			</div>
+			<div>
+				<div class="col-sm-8">
+					<h4>Entstehung</h4>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+				</div>
+				<div class="col-sm-4">
+				</div>
+			</div>
+			<div>
+				<div class="col-sm-8">
+					<h4>Ziele</h4>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+				</div>
+				<div class="col-sm-4">
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	<div id="team" class="container-fluid text-center bg-grey">
+	<h2 style="padding-top: 20px;">Team</h2>
+		<div class="row text-center">
+			<div class="col-sm-4">
+				<div class="thumbnail">
+				<img src="images/background.png" alt="Testfoto">
+				<p><strong>Nur ein TESTFOTO</strong></p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="thumbnail">
+				<img src="images/background.png" alt="Testfoto">
+				<p><strong>Nur ein TESTFOTO</strong></p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="thumbnail">
+				<img src="images/background.png" alt="Testfoto">
+				<p><strong>Nur ein TESTFOTO</strong></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="contact" class="container-fluid">
+		<h2 class="text-center" style="padding-top: 18px;">Kontakt</h2>
+		<div class="row contacts">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-2" style="text-align: left; margin-top: 20px; margin-bottom:20px;">
+				<h4>Unternehmen</h4>
+				<p>Straße</p>
+				<p>Ort</p>
+				<p>Land</p>
+				<h4>Telefon XXXXX XXXXXX</h4>
+				<p>Fax XXXXX XXXXXX</p>
+				<p>myemail@something.com</p>
+			</div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-2" style="text-align: left; margin-top: 20px; margin-bottom:20px;">
+				<h4><u>Öffnungszeiten:</u></h4>
+				<p>Montag: XX-XX XX-XX</p>
+				<p>Dienstag: XX-XX XX-XX</p>
+				<p>Mittwoch: XX-XX XX-XX</p>
+				<p>Donnerstag: XX-XX XX-XX</p>
+				<p>Freitag: XX-XX XX-XX</p>
+				<p>Samstag: XX-XX XX-XX</p>
+			</div>
+			<div class="col-sm-3"></div>
+	</div>
+		<div id="map" style="width:100%;height:400px"></div>
+		<script>
+		function myMap() {
+		  var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+		  var mapCanvas = document.getElementById("map");
+		  var mapOptions = {center: myCenter, zoom: 5};
+		  var map = new google.maps.Map(mapCanvas, mapOptions);
+		  var marker = new google.maps.Marker({position:myCenter});
+		  marker.setMap(map);
+		}
+		</script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+		<br>
+		<div class="text-center">
+			<a href="https://www.google.de/maps/dir//Schloss+Chambord,+Ch%C3%A2teau,+41250+Chambord,+Frankreich/@47.6162339,0.2642944,7z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47e4add37eb82821:0x6d1fb075610e2871!2m2!1d1.517218!2d47.616126!3e2" class="btn btn-default btn-lg" role="button" target="_blank">Route planen</a>
+		</div>
+	</div>
+	<footer class="container-fluid text-center">
+		<a href="#homepage" title="To Top">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+	</footer>
+	<script>
+	$(document).ready(function(){
+	  // Add smooth scrolling to all links in navbar + footer link
+	  $(".navbar a, footer a[href='#homepage']").on('click', function(event) {
+
+	   // Make sure this.hash has a value before overriding default behavior
+	  if (this.hash !== "") {
+
+		// Prevent default anchor click behavior
+		event.preventDefault();
+
+		// Store hash
+		var hash = this.hash;
+
+		// Using jQuery's animate() method to add smooth page scroll
+		// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		$('html, body').animate({
+		  scrollTop: $(hash).offset().top
+		}, 900, function(){
+
+		  // Add hash (#) to URL when done scrolling (default click behavior)
+		  window.location.hash = hash;
+		  });
+		} // End if
+	  });
+	})
+	</script>
 </body>
 </html>
